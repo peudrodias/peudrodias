@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Mines - Aposta</title>
+    <link rel="stylesheet" href="css/mines.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BET GAT</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="game-container">
+        <!-- Configurações à esquerda -->
+        <div class="settings-container">
+            <h2>Configurações</h2>
+            <div class="info-container">
+                <label for="mineCount">Escolha o número de minas:</label>
+                <input type="number" id="mineCount" min="1" max="24" value="5">
+            </div>
+
+            <div class="saldo-container">
+                <p><strong>Saldo:</strong> R$<span id="saldo">1000.00</span></p>
+                <label for="aposta">Valor da Aposta:</label>
+                <input type="number" id="aposta" min="1" max="1000" value="10">
+                <p id="valorAposta"><strong>Aposta atual:</strong> R$10</p>
+            </div>
+            
+            <!-- Botão para iniciar o jogo -->
+            <button id="startGameButton" class="start-game-btn">Iniciar Jogo</button>
+            <!-- Botão para parar o jogo -->
+            <button id="stopGameButton" class="start-game-btn" style="display: none;">Parar Jogo</button>
+        </div>
+
+        <!-- Jogo ao centro -->
+        <div id="jogo-container">
+            <h2>Jogo de Mines (Campo Minado)</h2>
+            <div class="mines-grid" id="mines-grid"></div>
+            <p id="resultado"></p>
+            <div id="gameOver" class="game-over">Game Over</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Casino Royale - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/mines-game.js"></script>
+</body>
+</html>

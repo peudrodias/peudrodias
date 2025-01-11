@@ -1,0 +1,226 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181818;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Game container */
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Configurações (à esquerda) */
+.settings-container {
+    flex: 1;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.settings-container h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff5733;
+    border-bottom: 2px solid #ff5733;
+    padding-bottom: 10px;
+}
+
+.settings-container label {
+    font-size: 1.1em;
+    color: #ff5733;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.settings-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.saldo-container {
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.saldo-container p {
+    margin-bottom: 10px;
+}
+
+.saldo-container strong {
+    color: #ff5733;
+}
+
+/* Jogo (ao centro) */
+#jogo-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#jogo-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ff5733;
+    border-bottom: 2px solid #ff5733;
+    padding-bottom: 10px;
+}
+
+.mines-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.grid-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5em;
+    background-color: #81c7f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.grid-btn:hover {
+    background-color: #66a9c9;
+    transform: scale(1.05);
+}
+
+.grid-btn:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+
+#gameOver {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+/* Botão para iniciar o jogo */
+.start-game-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.start-game-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.start-game-btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+}
+/* Estilo para o botão de Parar Jogo */
+.stop-game-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.stop-game-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.stop-game-btn:active {
+    background-color: #bd2130;
+    transform: scale(0.95);
+}
